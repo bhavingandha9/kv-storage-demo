@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <script type="importmap">
+    <title>Demo</title>
+    <!-- <script type="importmap">
       {
         "imports": {
           "/kv-storage-polyfill.mjs": [
@@ -14,7 +11,7 @@
           ]
         }
       }
-    </script>
+    </script> -->
   </head>
   <script type="module">
     import { storage } from "/kv-storage-polyfill.mjs";
@@ -23,6 +20,7 @@
       await storage.set("Hello", "World");
       let value = await storage.get("Hello");
       console.log(value);
+      storage.delete("Hello");
     })();
   </script>
   <body></body>
